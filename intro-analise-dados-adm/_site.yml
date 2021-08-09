@@ -2,7 +2,7 @@ name: " "
 title: "Minicurso"
 description: |
   intro-analise-dados
-output_dir: "."
+output_dir: "docs"
 theme: theme.css
 navbar:
   logo:
