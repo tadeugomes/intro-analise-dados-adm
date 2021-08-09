@@ -1,0 +1,27 @@
+---
+title: "Sobre o minicurso"
+description: |
+  Vamos nos organizar?
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Agenda e Programação
+
+*Dia 10 - terça-feira - 14h às 16h*
+
+Introdução ao R (instalação, quando usar e características da linguagem)
+
+*Dia 13 - sexta-feira - 14h às 16h*
+
+Pacotes do Tidyverse para manipulação de dados
+
+*Dia 17 - terça-feira - 14h às 16h*
+
+Visualização de dados com GGPLOT2
+
+*Dia 20 - sexta-feira - 14h às 16h*
+
+Rmarkdown e automação de relatórios

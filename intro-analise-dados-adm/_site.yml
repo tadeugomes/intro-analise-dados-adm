@@ -1,0 +1,19 @@
+name: " "
+title: "Minicurso"
+description: |
+  intro-analise-dados
+output_dir: "docs"
+theme: theme.css
+navbar:
+  logo:
+    image: imagens/logo_R.png
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Sobre"
+      href: sobre.html
+    - text: "Tutoriais"
+      menu:
+          - text: "Instalacao"
+            href: instalacao.html
+output: distill::distill_article

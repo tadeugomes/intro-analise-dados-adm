@@ -1,0 +1,59 @@
+---
+title: "Apresentação"
+description: |
+ Início da jornada
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Motivação
+
+Por que aprender a usar o *R*?
+
+A linguagem R é uma das principais ferramentas do mercado para análise de dados e pode ser utilizada em todo o ciclo de análise: coleta, tratamento, processamento, modelagem e comunicação de resultados.
+
+Bastante utilizada na área acadêmica e no mercado, conta com quase [18 mil](https://cran.r-project.org/web/packages/) pacotes desenvolvidos pela comunidade de usuários que ampliam consideravelmente sua funcionalidade.
+
+Você pode criar [sites](https://rstudio.github.io/distill/)com R (como este que estamos usando), [slides](https://xaringan.gallery/examples.html), [artigos](https://pkgs.rstudio.com/rticles/), [livros](https://www.bookdown.org/) e rapidamente realizar [análises estatísticas](https://github.com/easystats) e as mais variadas [visualizações](https://www.r-graph-gallery.com/) de dados, além da possibilidade de trabalhar com *machine learning* com os pacotes [caret](https://cran.r-project.org/web/packages/caret/) e [tidymodels](https://www.tidymodels.org/), além de muito mais.
+
+Algumas outras vantagens:
+
+-   É gratuita;
+
+-   Tem uma ativa comunidade de desenvolvedores e usuários no mercado e na academia;
+
+-   Dispõe de muitos tutoriais e dicas.
+
+-   Possibilita a automatização de relatórios e rotinas, dentre outras vantagens.
+
+São vantagens, portanto, que ferramentas pagas não apresentam. A flexibilidade e riqueza da linguagem tem um trade off: aprender a linguagem.
+
+Então, vamos lá?
+
+![](https://media.giphy.com/media/xT8qBsOjMOcdeGJIU8/giphy.gif)
+
+# Acesso ao material do Curso
+
+## Rstudio Cloud
+
+O primeiro passo é o acesso ao material do curso e aos recursos do R.
+
+A maneira mais prática de começar é por meio do Rstudio Cloud. Para isso, siga o link <https://rstudio.cloud/> e siga o tutorial.
+
+## Instalação local (no seu computador)
+
+Você também pode fazer a instação no seu computador do R e do Rstudio.
+
+O R pode ser baixado nesse link: <https://cran.r-project.org/bin/windows/base/R-4.1.0-win.exe>
+
+Durante a instalação, caso apareça a opção de *adicionar variável de ambiente* ao *path*, marque a opção.
+
+Em seguida, baixe e instale o Rstudio no seu computador: <https://www.rstudio.com/products/rstudio/download/#download>
+
+O Rstudio é a interface (IDE) para acessar os recursos do R.
+
+## Qual a forma mais fácil?
+
+Sugiro que usem o Rstudio Cloud até estarem confortáveis antes da utilização da máquina local, até porque os recursos na cloud não dependem das condições da máquina local (memória e outros possíveis problemas).
