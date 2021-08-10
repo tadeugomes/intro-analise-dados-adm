@@ -60,6 +60,8 @@ Sugiro que usem o Rstudio Cloud até estarem confortáveis antes da utilização
 
 Para as atividades do curso, acessem o espaço de trabalho compartilhado do RStudio Cloud [aqui](https://login.rstudio.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Frstudio.cloud%252Flogin%26client_id%3Drstudio-cloud%26response_type%3Dcode%26show_auth%3D0%26show_login%3D0%26show_setup%3D0).
 
+[Vejam aqui o tutorial para acesso ao Rstudio Cloud e primeiros passos.](https://drive.google.com/file/d/1Il0AUnJdl6feZdAk2XU08IcvMvHJAsjc/view?usp=sharing)
+
 ```{css}
 body {
 

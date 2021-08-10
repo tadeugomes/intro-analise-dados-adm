@@ -25,3 +25,24 @@ Visualização de dados com GGPLOT2
 *Dia 20 - sexta-feira - 14h às 16h*
 
 Rmarkdown e automação de relatórios
+
+```{r, fig.width=10}
+
+library(calendR)
+
+events <- rep(NA, 31)
+
+# Set the corresponding events
+events[10] <- "Início"
+events[13] <- "Segundo dia"
+events[17] <- "Terceiro dia"
+events[20] <- "Encerramento"
+
+calendR(year = 2021,
+        month = 8,
+        special.days = events,
+        special.col = c("lightblue", # Colors
+                        "lightgreen", "lightsalmon", "pink"),
+        legend.pos = "top")
+
+```
