@@ -10,8 +10,8 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Sobre"
-      href: sobre.html
+    - text: "Agenda"
+      href: agenda.html
     - text: "Tutoriais"
       menu:
           - text: "Instalacao"

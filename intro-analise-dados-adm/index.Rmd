@@ -16,3 +16,12 @@ knitr::opts_chunk$set(echo = FALSE)
 # 
 
 Minicurso organizado pelo [Grupo de Pesquisa GPPDEO](gppdeo.org) do *Curso de Administração* e [Programa de Pós-Graduação em Propriedade Intelectual e Transferência de Tecnologia para a Inovação](www.profnit.ufma.br)da Universidade Federal do Maranhão com o objetivo de estimular a análise de dados nas pesquisas e atividades de trabalho!
+
+```{css}
+body {
+
+  text-align: justify;
+
+}
+
+```

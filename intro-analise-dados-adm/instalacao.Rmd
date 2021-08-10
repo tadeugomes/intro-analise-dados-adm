@@ -16,7 +16,7 @@ A linguagem R é uma das principais ferramentas do mercado para análise de dado
 
 Bastante utilizada na área acadêmica e no mercado, conta com quase [18 mil](https://cran.r-project.org/web/packages/) pacotes desenvolvidos pela comunidade de usuários que ampliam consideravelmente sua funcionalidade.
 
-Você pode criar [sites](https://rstudio.github.io/distill/)com R (como este que estamos usando), [slides](https://xaringan.gallery/examples.html), [artigos](https://pkgs.rstudio.com/rticles/), [livros](https://www.bookdown.org/) e rapidamente realizar [análises estatísticas](https://github.com/easystats) e as mais variadas [visualizações](https://www.r-graph-gallery.com/) de dados, além da possibilidade de trabalhar com *machine learning* com os pacotes [caret](https://cran.r-project.org/web/packages/caret/) e [tidymodels](https://www.tidymodels.org/), além de muito mais.
+Você pode criar [sites](https://rstudio.github.io/distill/) com R (como este que estamos usando), [slides](https://xaringan.gallery/examples.html), [artigos](https://pkgs.rstudio.com/rticles/), [livros](https://www.bookdown.org/) e rapidamente realizar [análises estatísticas](https://github.com/easystats) e as mais variadas [visualizações](https://www.r-graph-gallery.com/) de dados, além da possibilidade de trabalhar com *machine learning* com os pacotes [caret](https://cran.r-project.org/web/packages/caret/) e [tidymodels](https://www.tidymodels.org/).
 
 Algumas outras vantagens:
 
@@ -57,3 +57,12 @@ O Rstudio é a interface (IDE) para acessar os recursos do R.
 ## Qual a forma mais fácil?
 
 Sugiro que usem o Rstudio Cloud até estarem confortáveis antes da utilização da máquina local, até porque os recursos na cloud não dependem das condições da máquina local (memória e outros possíveis problemas).
+
+```{css}
+body {
+
+  text-align: justify;
+
+}
+
+```
