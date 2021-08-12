@@ -56,11 +56,22 @@ O Rstudio é a interface (IDE) para acessar os recursos do R.
 
 ## Qual a forma mais fácil?
 
-Sugiro que usem o Rstudio Cloud até estarem confortáveis antes da utilização da máquina local, até porque os recursos na cloud não dependem das condições da máquina local (memória e outros possíveis problemas).
+Sugiro que usem o Rstudio Cloud até estarem confortáveis antes da utilização da máquina local, até porque os recursos na cloud não dependem das condições do computador que estiver em uso (memória e outros possíveis aspectos técnicos).
 
-Para as atividades do curso, acessem o espaço de trabalho compartilhado do RStudio Cloud [aqui](https://login.rstudio.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Frstudio.cloud%252Flogin%26client_id%3Drstudio-cloud%26response_type%3Dcode%26show_auth%3D0%26show_login%3D0%26show_setup%3D0).
+# Material do 1º Encontro
+
+Para as atividades do curso, acessem o espaço de trabalho compartilhado do RStudio Cloud [aqui](https://rstudio.cloud/project/2759021).
 
 [Vejam aqui o tutorial para acesso ao Rstudio Cloud e primeiros passos.](https://drive.google.com/file/d/1Il0AUnJdl6feZdAk2XU08IcvMvHJAsjc/view?usp=sharing)
+
+```{r}
+library(icons)
+
+```
+
+O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser baixado [aqui](https://drive.google.com/file/d/1EuGsbYtyJjbTeDg1i9y13XGf534umONl/view?usp=sharing).
+
+Já o vídeo `r icons::fontawesome("video", style = "solid")` pode ser acessado [aqui](https://drive.google.com/file/d/13LAkrL4W4cAGU3lcgwlAzpdOAgCdpSUU/view?usp=sharing).
 
 ```{css}
 body {
