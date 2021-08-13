@@ -1,0 +1,41 @@
+---
+title: "Manipulação de dados com Dplyr"
+description: |
+ Início da jornada
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Manipulação de dados
+
+Neste encontro vamos começar a aprender, com o pacote `dplyr`, a manipular dados em um *dataset* antes de qualquer modelagem ou análise.
+
+Vamos conhecer como selecionar colunas, filtrar linhas em um dataset, criar outra variável e ordenar os dados.
+
+Nossa referência, claro, é o livro [R para Ciência de Dados](https://r4ds.had.co.nz/transform.html), do Hadley Wickham, disponível gratuitamente.
+
+![](https://media.giphy.com/media/Gczu4TWme6FjZLMcnq/giphy.gif)
+
+# Material do 2º Encontro
+
+Para as atividades do encontro, acessem o espaço de trabalho compartilhado do RStudio Cloud [aqui](https://rstudio.cloud/project/2759021), onde o ambiente já está configurado e os arquivos para a prática estão disponíveis.
+
+```{r}
+library(icons)
+
+```
+
+O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser baixado [aqui](https://drive.google.com/file/d/1Y-n9QIxoXvzFXf-Wdya3zz7EefGgus2W/view?usp=sharing), mas recomendo que acessem o material pelo Rstudio Cloud.
+
+Já o vídeo `r icons::fontawesome("video", style = "solid")` do encontro pode ser acessado [aqui](https://drive.google.com/file/d/1m05d6Z19w8W_fBo-tPblVGeWzNwRYsjD/view?usp=sharing) e o *chat* [aqui](https://drive.google.com/file/d/1ZBYSwNWp7CKMwj26pF3JXe9he1AGQmn2/view?usp=sharing).
+
+```{css}
+body {
+
+  text-align: justify;
+
+}
+
+```
