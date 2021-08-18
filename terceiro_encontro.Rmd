@@ -1,0 +1,299 @@
+---
+title: "Visualização de dados com ggplot2"
+description: |
+ Breve apresentação do pacote
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library("tidyverse"))
+```
+
+O R dispõe de vários pacotes para visualização de dados, mas um dos mais importantes é o ggplot2. Vamos nesse encontro mostrar algumas das possibilidades desse pacote.
+
+```{r, echo=FALSE}
+library(icons)
+
+```
+
+O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser baixado [aqui](https://drive.google.com/file/d/15VIDIYB_WFI5mFPn5nDWZbGpQFciQqa1/view?usp=sharing), mas recomendo que acessem o material pelo [Rstudio Cloud](https://rstudio.cloud/project/2759021), como nos encontros anteriores.
+
+Já o vídeo `r icons::fontawesome("video", style = "solid")` do encontro pode ser acessado [aqui](https://drive.google.com/file/d/1nxf0YNLR3ukj_7CHA2VBl2ExlFhdn7Aj/view?usp=sharing) e o chat [aqui](https://drive.google.com/file/d/1OrsCMiUXpx4c6cPgebuFZldq9DGN5UVj/view?usp=sharing).
+
+## Vamos instalar e carregar alguns pacotes
+
+```{r}
+
+#install.packages("gapminder") dataset https://www.gapminder.org/
+library(gapminder)
+library(ggplot2)
+library(tidyverse)
+
+```
+
+Vamos salvar o dataset em um objeto para visualizar no ambiente de trabalho e aproveitar para conferir a estrutura dos dados.
+
+```{r}
+
+gapminder <- gapminder
+
+str(gapminder) 
+
+head(gapminder)  # Vamos conferir os primeiros dados também
+```
+
+```{r}
+
+# Podemos utilizar o summary para uma análise geral 
+summary(gapminder)
+
+
+
+```
+
+A tabela de contingência pode ser utilizada para visualizar a quantidade de países por continente nos anos disponíveis no dataset.
+
+```{r}
+
+table(gapminder$continent, gapminder$year)
+
+```
+
+Contudo, a tabela de contingência nem sempre é a melhor opção para visualizar a relação entre variáveis, já que podemos ter um grande número de observações nos dados. Utilizamos os gráficos, então.
+
+Vamos plotar um gráfico de barras para visualizar a distribuição de uma variável discreta (contável) do nosso dataset. Nesse caso, a variavel continente.
+
+Observem que no eixo X estão as variáveis plotadas com o estilo default do ggplot2 para gráfico de barras (`geom_bar)`, com a contagem das observações.
+
+```{r}
+
+ggplot(gapminder, aes(x=continent)) + geom_bar()  # No ggplot não usamos o pipe
+
+```
+
+Podemos melhorar o gráfico acima com a inserção de cores a partir do argumento `fill`. O argumento `fill`é utilizado para preencher o gráfico e inserir, automaticamente, uma legenda com o nome das variaveis do eixo X
+
+```{r}
+
+ggplot(gapminder, aes(x=continent, fill=continent)) + geom_bar()
+
+
+
+```
+
+Você pode também customizar:
+
+-   as cores padrão (default).
+-   modificar labels: fonte, tamanho da fonte, inserir textos, títulos, subtítulos e legenda.
+-   modificar a posicao da legenda ou eliminá-la
+-   criar uma variavel para plotar.
+-   alterar o eixo das coordenadas de x,y para y,x (coord_flip).
+
+Observem a seguir algumas dessas possibilidades:
+
+Ainda com o `geom_bar`, podemos fazer transformar os dados mapeados em y, fazendo uma divisão por exemplo, acrescentar títulos aos eixos com `labs`, suprimir a legenda das variáveis, como no exemplo.
+
+```{r}
+
+ggplot(gapminder, aes(x=continent, fill=continent)) + 
+    geom_bar(aes(y=..count../12)) +  
+    labs(y="Número de países") + 
+    guides(fill="none")  # Supressão da legenda, pois está redundante. 
+
+```
+
+Pronto, estamos já a utilizar um dos principais pacotes de visualização de dados!
+
+Observe que o esquema básico de um gráfico com ggplot2 é o seguinte:
+
+*`ggplot(data = <DATA>) +`* \# dados
+
+*`<GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))`*\# função de geometria dos dados e características de customização estética
+
+Ou seja, estamos trabalhando com a gramática dos gráficos!
+
+![](https://media.giphy.com/media/WRQBXSCnEFJIuxktnw/giphy.gif)
+
+Gramática dos gráficos?
+
+## Gramática dos gráficos
+
+O que fizemos na seção acima foi trabalhar com o conceito de gramática dos gráficos, que é basicamente construir os gráficos a partir de camadas.
+
+Observe a figura a seguir e repare que temos a primeira camada que são os dados necessários, definindo quais são as variáveis que serão utilizadas. Com aesthetics (`aes`), define-se a relação entre as variáveis e observações (eixos X e Y, cores, agrupamentos dos dados etc.). Em seguida define-se a geometria dos dados (`geom`), ou seja, um gráfico de barras, scaterplot, densidade, histograma, dentre outros, bem como a definição de estatísticas, coordenadas e temas.
+
+![](http://www.science-craft.com/wp-content/uploads/2014/06/ggplot-3.png)
+
+Pode-se, com essa flexibilidade, criar os mais variados tipos de gráficos, como se observa na [galeria de gráficos do ggplot2](https://www.r-graph-gallery.com/ggplot2-package.html).
+
+Podemos destacar algumas das geometrias:
+
+| **Tipo**                | **Objeto Geométrico**       |
+|-------------------------|-----------------------------|
+| Dispersão (scatterplot) | `geom_point()`              |
+| Gráfico de bolhas       | `geom_point()`              |
+| Gráfico de barras       | `geom_col()` e `geom_bar()` |
+| Histograma              | `geom_histogram()`          |
+| Boxplot                 | `geom_boxplot()`            |
+| Densidade               | `geom_density()`            |
+| Gráfico de linhas       | `geom_line()`               |
+
+O ggplot2, desenvolvido pelo Hadley Wickham, tem sua apresentação no livro [R for Data Science](https://r4ds.had.co.nz/data-visualisation.html) e na [página do pacote](https://ggplot2.tidyverse.org/). Um ótimo material em português, fonte do quadro com o sumário de funções acima, é o livro [ Ciência de Dados com R, do IBPAD](https://cdr.ibpad.com.br/ggplot2.html#mapeamento-est%C3%A9tico).
+
+## Customizando gráficos com ggplot2
+
+Todo gráfico é um objeto em R. Então podemos salvá-lo para customizações e usos posteriores:
+
+```{r}
+
+meu_bar_plot <- last_plot()
+
+```
+
+Agora podemos testar a alteração das coordenadas do gráfico por meio da função `coord`.
+
+-   `coord_flip()` altera os eixos X e Y, criando um gráfico com barras horizontais.
+
+-   `coord_polar()` mapeia os eixos (X,Y) para um gráfico com coordenadas do tipo polar, uma alternativa ao gráfico de pizza.
+
+```{r}
+
+meu_bar_plot + coord_flip()
+```
+
+```{r}
+
+meu_bar_plot + coord_polar()
+```
+
+### Gráficos de densidade
+
+```{r}
+
+ggplot(data=gapminder, aes(x=lifeExp)) + 
+    geom_density()
+
+```
+
+```{r}
+
+ggplot(data=gapminder, aes(x=lifeExp)) + 
+    geom_density(size=1.5, fill="blue", alpha=0.3)
+
+```
+
+### Diferença por continente
+
+Como temos algumas váriaveis contínuas no dataset como expectativa de vida (`lifeExp`), população (`pop`) e renda per capita (`gdpPercap`) para cada ano (`year`) e país (`country`), podemos usar gráficos que trazem um sumário das informações.
+
+No gráfico abaixo temos um gráfico de densidade (geom_density) que apresenta a expectativa de vida por continente. O parâmetro `alpha`é utilizado para controlar a transparência das cores.
+
+```{r}
+
+ggplot(data=gapminder, aes(x=lifeExp, fill=continent)) +
+    geom_density(alpha=0.3)
+
+
+```
+
+Vamos agora usar um boxplot:
+
+```{r}
+
+ggplot(data=gapminder, aes(x=continent, y=lifeExp, fill=continent))+
+   geom_boxplot(outlier.size=2) # Pedimos para que haja uma ênfase nos outliers
+```
+
+Podemos agora ordenar o resultado, melhorando a apresentação do resultado:
+
+```{r}
+gapminder %>% 
+    mutate(continent = reorder(continent, lifeExp, FUN=median)) %>% # indica-se a ordem para ordenar os gráficos
+    ggplot(aes(x=continent, y=lifeExp, fill=continent)) +
+    geom_boxplot(outlier.size=2)
+
+```
+
+### Vamos plotar agora um sumário dos dados
+
+```{r}
+
+gapminder %>%
+    group_by(continent, year) %>%
+    summarise(lifeExp=median(lifeExp)) %>% head()
+
+```
+
+A mediana da expectativa de vida plotada acima pode ser visualizada diretamente com o ggplot integrando o `dplyr`e o `ggplot2:`
+
+```{r}
+
+gapminder %>%
+    group_by(continent, year) %>%   # fazemos um agrupamento dos dados
+    summarise(lifeExp=median(lifeExp)) %>%  # criamos nova coluna com mediana
+    ggplot(aes(x=year, y=lifeExp, color=continent)) +  # dados do gráfico
+     geom_line(size=1) +  # gráfico de linhas, indicando a espessura da linha 
+     geom_point(size=1.5)  # adicionamos pontos e os tamanhos dos pontos
+```
+
+### Vamos criar agora um um scaterplot (gráfico de dispersão)
+
+O gráfico que vamos criar agora junta vários pontos do que estamos até o momento:
+
+```{r}
+gapminder_subset <- gapminder %>% # salvamos em um objeto um subset dos dados
+filter(year == "2007") %>% # filtro e criação de novas variaveis, incluindo um reordenamento nos níveis com fct_relevel
+mutate(
+  pop2 = pop + 1,
+  continent = case_when(
+    continent == "Oceania" ~ "Asia",
+    TRUE ~ as.character(continent)
+  ) %>% as.factor %>% 
+    fct_relevel("Asia", "Americas", "Europe", "Africa")
+) 
+
+```
+
+Agora vamos usar o dataset acima para criar o gráfico, mas com um grau maior de customização.
+
+```{r}
+
+ggplot(data = gapminder_subset, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point(aes(size = pop, color = continent)) +
+  geom_point(aes(size = pop2), color = "black", shape = 21) +
+  scale_x_log10(breaks = c(500, 1000, 2000, 4000,
+                           8000, 16000, 32000, 64000)) +
+  scale_y_continuous(breaks = seq(0, 90, by = 10)) +
+  scale_color_manual(values = c("#F15772", "#7EEB03",
+                                "#FBE700", "#54D5E9"))  +
+  scale_size_continuous(range = c(1, 30)) +
+  guides(size = "none", color = "none") +
+  labs(
+    x = "Renda",
+    y = "Expectativa de Vida"
+  ) +
+  theme_minimal()
+
+```
+
+### Agora podemos fazer uma regressão linear para cada continente
+
+```{r}
+
+gap_anual <- gapminder %>%
+    group_by(continent, year) %>%
+    summarise(lifeExp=median(lifeExp)) 
+
+ggplot(gap_anual, aes(x=year, y=lifeExp, color=continent)) +
+    geom_point(size=1.5) +
+    geom_smooth(aes(fill=continent), method="lm")
+```
+
+```{css, echo=FALSE}
+body {
+
+  text-align: justify;
+
+}
+
+```
