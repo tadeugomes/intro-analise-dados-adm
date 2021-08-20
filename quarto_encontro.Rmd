@@ -1,0 +1,27 @@
+---
+title: "Trabalhando com Rmarkdown"
+description: |
+  Comunicação e reprodutibilidade de pesquisas e análises
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library("tidyverse"))
+```
+
+O R Markdown é uma linguagem de marcação que suporta variados tipos de saídas de documentos estáticos ou dinâmicos como [HTML, PDF, MS Word, Beamer, HTML5, além dos mais variados formatos como slides, livros, sites, dashboards, aplicativos shiny, escrita de artigos científicos](https://rmarkdown.rstudio.com/gallery.html) etc. Ou seja, é uma ótima ferramenta para documentar a análise e comunicar os respectivos resultados.
+
+Podemos destacar duas obras de referência para trabalhar com o R Markdown: [**R Markdown: The Definitive Guide**](https://bookdown.org/yihui/rmarkdown/)e o **[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/).** [Há também um guia rápido para consultar os principais comandos](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf), que vamos utilizar.
+
+Vamos trabalhar, em nosso exemplo, com os modelos de artigos científicos disponibilizados pelo pacote [`rticles`](https://pkgs.rstudio.com/rticles/articles/articles/examples.html)`.`
+
+### Material da sessão
+
+```{r, echo=FALSE}
+library(icons)
+
+```
+
+O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser baixado aqui, mas recomendo que acessem o material pelo [Rstudio Cloud](https://rstudio.cloud/project/2759021), como nos encontros anteriores.
+
+Já o vídeo `r icons::fontawesome("video", style = "solid")` do encontro pode ser acessado aqui e o chat aqui.

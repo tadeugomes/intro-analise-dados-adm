@@ -20,4 +20,6 @@ navbar:
             href: segundo_encontro.html
           - text: "Terceiro Encontro"
             href: terceiro_encontro.html
+          - text: "Quarto Encontro"
+            href: quarto_encontro.html
 output: distill::distill_article
