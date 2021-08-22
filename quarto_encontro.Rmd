@@ -22,6 +22,6 @@ library(icons)
 
 ```
 
-O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser baixado aqui, mas recomendo que acessem o material pelo [Rstudio Cloud](https://rstudio.cloud/project/2759021), como nos encontros anteriores.
+O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser acessado junto com o material do minicurso no [Rstudio Cloud](https://rstudio.cloud/project/2759021), como nos encontros anteriores.
 
-Já o vídeo `r icons::fontawesome("video", style = "solid")` do encontro pode ser acessado aqui e o chat aqui.
+Já o vídeo `r icons::fontawesome("video", style = "solid")` do encontro pode ser acessado [aqui](https://drive.google.com/file/d/1G7YeQudrQEQS7o4uFhBLJBKgUSg54MKA/view?usp=sharing) e o chat [aqui](https://drive.google.com/file/d/16vuzk-VDM45-yYAXxHMXLgY77ut2ZDBc/view?usp=sharing).
