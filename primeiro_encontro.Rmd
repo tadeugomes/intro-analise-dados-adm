@@ -1,5 +1,5 @@
 ---
-title: "Apresentação"
+title: "Acesso ao R e ao Rstudio Cloud"
 description: |
  Início da jornada
 ---
@@ -34,13 +34,19 @@ Então, vamos lá?
 
 ![](https://media.giphy.com/media/xT8qBsOjMOcdeGJIU8/giphy.gif)
 
-# Acesso ao material do Curso
+# Acesso ao material
 
 ## Rstudio Cloud
 
-O primeiro passo é o acesso ao material do curso e aos recursos do R.
+O primeiro passo da nossa atividade é o acesso ao material do curso e aos recursos do R.
 
-A maneira mais prática de começar é por meio do Rstudio Cloud. Para isso, siga o link <https://rstudio.cloud/> e siga o tutorial.
+A maneira mais prática de começar é por meio do Rstudio Cloud, onde você terá acesso a todo o material como se estivesse no seu computador.
+
+[Vejam aqui o tutorial para acesso ao Rstudio Cloud e primeiros passos.](https://drive.google.com/file/d/1Il0AUnJdl6feZdAk2XU08IcvMvHJAsjc/view?usp=sharing)
+
+Para as atividades da oficina, acessem o espaço de trabalho compartilhado do RStudio Cloud [aqui](https://rstudio.cloud/project/2759021).
+
+Se a página acima ainda não estiver disponível, acesse por [esse](https://login.rstudio.cloud/login?redirect=%2F).
 
 ## Instalação local (no seu computador)
 
@@ -58,12 +64,6 @@ O Rstudio é a interface (IDE) para acessar os recursos do R.
 
 Sugiro que usem o Rstudio Cloud até estarem confortáveis antes da utilização da máquina local, até porque os recursos na cloud não dependem das condições do computador que estiver em uso (memória e outros possíveis aspectos técnicos).
 
-# Material do 1º Encontro
-
-Para as atividades do curso, acessem o espaço de trabalho compartilhado do RStudio Cloud [aqui](https://rstudio.cloud/project/2759021).
-
-[Vejam aqui o tutorial para acesso ao Rstudio Cloud e primeiros passos.](https://drive.google.com/file/d/1Il0AUnJdl6feZdAk2XU08IcvMvHJAsjc/view?usp=sharing)
-
 ```{r}
 library(icons)
 
@@ -71,7 +71,7 @@ library(icons)
 
 O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser baixado [aqui](https://drive.google.com/file/d/1EuGsbYtyJjbTeDg1i9y13XGf534umONl/view?usp=sharing).
 
-Já o vídeo `r icons::fontawesome("video", style = "solid")` pode ser acessado [aqui](https://drive.google.com/file/d/13LAkrL4W4cAGU3lcgwlAzpdOAgCdpSUU/view?usp=sharing).
+Já o vídeo `r icons::fontawesome("video", style = "solid")` pode ser acessado aqui.
 
 ```{css}
 body {

@@ -14,12 +14,12 @@ navbar:
       href: agenda.html
     - text: "Tutoriais"
       menu:
-          - text: "Primeiro Encontro"
+          - text: "Acesso ao R"
             href: primeiro_encontro.html
-          - text: "Segundo Encontro"  
+          - text: "Manipular os dados"  
             href: segundo_encontro.html
-          - text: "Terceiro Encontro"
+          - text: "Visualizar os dados"
             href: terceiro_encontro.html
-          - text: "Quarto Encontro"
+          - text: "Rmarkdown na academia"
             href: quarto_encontro.html
 output: distill::distill_article
