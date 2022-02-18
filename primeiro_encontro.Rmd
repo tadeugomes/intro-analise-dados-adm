@@ -69,7 +69,7 @@ library(icons)
 
 ```
 
-O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser baixado [aqui](https://drive.google.com/file/d/1EuGsbYtyJjbTeDg1i9y13XGf534umONl/view?usp=sharing).
+O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser baixado aqui.
 
 Já o vídeo `r icons::fontawesome("video", style = "solid")` pode ser acessado aqui.
 

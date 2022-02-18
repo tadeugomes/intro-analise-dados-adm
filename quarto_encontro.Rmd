@@ -9,9 +9,9 @@ knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library("tidyverse"))
 ```
 
-O R Markdown é uma linguagem de marcação que suporta variados tipos de saídas de documentos estáticos ou dinâmicos como [HTML, PDF, MS Word, Beamer, HTML5, além dos mais variados formatos como slides, livros, sites, dashboards, aplicativos shiny, escrita de artigos científicos](https://rmarkdown.rstudio.com/gallery.html) etc. Ou seja, é uma ótima ferramenta para documentar a análise e comunicar os respectivos resultados.
+O R Markdown é uma linguagem de marcação que suporta variados tipos de saídas de documentos estáticos ou dinâmicos como [HTML, PDF, MS Word, Beamer, HTML5](https://rmarkdown.rstudio.com/gallery.html), além dos mais variados formatos como [slides](https://slides.yihui.org/xaringan/#1), [livros](https://bookdown.org/), [sites](https://rstudio.github.io/distill/), [dashboards, aplicativos shiny](https://shiny.rstudio.com/), escrita de artigos científicos etc. Ou seja, é uma ótima ferramenta para documentar a análise e comunicar os respectivos resultados.
 
-Podemos destacar duas obras de referência para trabalhar com o R Markdown: [**R Markdown: The Definitive Guide**](https://bookdown.org/yihui/rmarkdown/)e o **[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/).** [Há também um guia rápido para consultar os principais comandos](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf), que vamos utilizar.
+Podemos destacar duas obras de referência para trabalhar com o R Markdown: [**R Markdown: The Definitive Guide**](https://bookdown.org/yihui/rmarkdown/)e o [**R Markdown Cookbook**](https://bookdown.org/yihui/rmarkdown-cookbook/)**.** [Há também um guia rápido para consultar os principais comandos](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf), que vamos utilizar.
 
 Vamos trabalhar, em nosso exemplo, com os modelos de artigos científicos disponibilizados pelo pacote [`rticles`](https://pkgs.rstudio.com/rticles/articles/articles/examples.html)`.`
 
@@ -24,4 +24,4 @@ library(icons)
 
 O código `r icons::fontawesome("code", style = "solid")` usado no encontro pode ser acessado junto com o material do minicurso no [Rstudio Cloud](https://rstudio.cloud/project/2759021), como nos encontros anteriores.
 
-Já o vídeo `r icons::fontawesome("video", style = "solid")` do encontro pode ser acessado [aqui](https://drive.google.com/file/d/1G7YeQudrQEQS7o4uFhBLJBKgUSg54MKA/view?usp=sharing) e o chat [aqui](https://drive.google.com/file/d/16vuzk-VDM45-yYAXxHMXLgY77ut2ZDBc/view?usp=sharing).
+Já o vídeo `r icons::fontawesome("video", style = "solid")` do encontro pode ser acessado aqui e o chat aqui.
